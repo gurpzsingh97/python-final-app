@@ -27,14 +27,14 @@ def index():
     return render_template("index.html")
 
 
-@app.route("/about")
-def about():
-    return render_template("about.html")
+@app.route("/bookings")
+def bookings():
+    return render_template("bookings.html")
 
 
-@app.route("/contact")
-def contact():
-    return render_template("contact.html")
+@app.route("/houses")
+def houses():
+    return render_template("houses.html")
 
 
 @app.route("/login", methods=["GET","POST"])
@@ -47,7 +47,7 @@ def login():
             if check_password_hash(
                 existing_user["password"], request.form.get("password")):
                     session["user"] = request.form.get("username").lower()
-                    flash("{}, it is time to write down your own thoughts..." .format(
+                    flash("{}, you're in!!!!" .format(
                         request.form.get("username")))
                     return redirect((url_for(
                         "index", username=session["user"])))

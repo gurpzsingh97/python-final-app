@@ -1,6 +1,38 @@
 {% extends "base.html" %}
+{% block title %}
+<div class="grey">
+    <div class="container main-image">
+        <div class="row">
+            <div class="text-content">
+                <h1>Dream Home Realty</h1>
+                <h3>Find the perfect place for you here</h3>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
 {% block content %}
-<H1>hello</H1>
+
+<div class="card image-card mb-3">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h3 class="card-title">For those who seek an exceptional home and life, there is only Dream Home realty.</h3>
+          <br>
+          <p class="card-text">Built on centuries of tradition and dedicated to innovating the luxury real estate industry,
+            Sotheby's International Realty offers transformative experiences through a global network of exceptional agents.</p>
+            <br>
+            <a href="{{ url_for('houses') }}"class="buttons" type="button">View Houses</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
 
 {% endblock %}
 

@@ -1,26 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap');
+
+body{
+    font-family: 'Josefin Sans', sans-serif;
+    background-image:url("https://images.unsplash.com/photo-1615799998603-7c6270a45196?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Z3JleSUyMHRleHR1cmV8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80")
+}
+
+.nav-item :hover{
+    color: blanchedalmond;
+} 
+
 .nav-link{
-    color: black;
+    color:black;
+    text-transform: uppercase;
+}
+.navbar{
+    animation: navanimation 3s;
+    background-color: rgba(13, 86, 180, 0.384);
+    border-bottom: solid rgb(255, 255, 255);
 }
 .for-forms{
     margin-top:50px;
     padding:5%;
-    border-style:solid;
-    border-color: black;
+    
 }
 .flashes{
     text-align: center;
     background-color: #06df2352;
 }
 
+.main-image {
+    background-image: url("https://images.adsttc.com/media/images/5e1d/02c3/3312/fd58/9c00/06e9/large_jpg/NewHouse_SA_Photo_01.jpg?1578959519");
+    background-color: #cccccc;
+    height: 700px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    animation:move 2s;
+    opacity:0.9;
+  }
+  .text-content{
+      position:absolute;
+      top:55%;
+      left:40%;
+      width:auto;
+      color: #e4e4e4;
+      background-color:rgba(0, 0, 0, 0.705);
+      padding-left:5%;
+      text-align: left;
+      border: 15px solid rgba(0, 0, 0, 0.973);
+  }
+  .text-content h1{
+    font-size:50px;
+    margin-right:10px;
+  }
+.footer{
+    margin-top:100px;
+    background-color: rgba(0, 0, 0, 0.767);
+    color:#e4e4e4;
+}
+.image-card{
+    margin-top:100px;
+}
+.buttons{
+    border: solid grey;
+    background-color: rgb(61, 61, 61);
+    color:grey;
+    text-decoration: none;
+    padding:1%;
+    border-radius: 5px;
+}
+.buttons:hover{
+    border: solid rgb(0, 0, 0);
+    background-color: rgb(211, 211, 211);
+    color:grey;
+    text-decoration: none;
+    padding:1%;
+}
+  
+  @keyframes navanimation {
+    from{
+        background-color: rgb(118, 131, 148);
+    }
+    to{
+        background-color: rgba(13, 86, 180, 0.384);
+    }
+}
 
+@keyframes move {
+    from{
+        height:600px;
+        opacity: 1;
+    }
+    to{
+      height:700px;
+      opacity: 0.9;
+    }
+}
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 800px) {
     .sm-only{
-    display: none;
-    }}
+        display: none;
+    }
+    
+}
 
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 800px) {
     .bg-only {
-    display: none;
-    }}
+        display: none;
+    }
+    .text-content{
+        font-size:40px;
+        left:20%;
+        top:50%;
+        
+      }
+}

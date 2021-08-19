@@ -29,12 +29,40 @@ def index():
 
 @app.route("/bookings")
 def bookings():
-    return render_template("bookings.html")
+    bookings = list(mongo.db.bookings.find())
+    return render_template("bookings.html", bookings=bookings)
+
+
+@app.route("/create_booking")
+def create_booking():
+    return render_template("create_booking.html")
 
 
 @app.route("/houses")
 def houses():
     return render_template("houses.html")
+
+
+@app.route("/house1")
+def house1():
+    return render_template("house1.html")
+
+
+@app.route("/house2")
+def house2():
+    return render_template("house2.html")
+
+
+@app.route("/house3")
+def house3():
+    return render_template("house3.html")
+
+
+@app.route("/login_warning")
+def login_warning():
+    flash("Log In or Register to make bookings")
+    return render_template("login.html")
+
 
 
 @app.route("/login", methods=["GET","POST"])
@@ -57,7 +85,6 @@ def login():
         else:
             flash("Username or Password is incorrect")
             return redirect(url_for("login"))
-
     return render_template("login.html")
 
 

@@ -23,16 +23,12 @@
 <body>
     <nav class="navbar navbar-light">
         <div class="container-fluid">
-            {% if session.user %}
             <a class="navbar-brand" href="{{ url_for('index') }}">Dream Home</a>
-            {% else %}
-            <a class="navbar-brand" href="{{ url_for('login') }}">Dream Home</a>
-            {% endif %}
             <div>
                 <ul class="nav justify-content-end ">
-                    {% if session.user %}
                     <li class="bg-only nav-item"><a class="nav-link active" href="{{ url_for('index') }}">Home</a></li>
-                    <li class="bg-only nav-item"><a class="nav-link active" href="{{ url_for('houses') }}">Houses</a></li>
+                    <li class="bg-only nav-item"><a class="nav-link active" href="{{ url_for('houses') }}">Houses</a></li
+                    >{% if session.user %}
                     <li class="bg-only nav-item"><a class="nav-link active" href="{{ url_for('bookings') }}">My Bookings</a></li>
                     <li class="bg-only nav-item"><a class="nav-link active" href="{{ url_for('logout') }}">Logout</a></li>
                     {% else %}
@@ -55,8 +51,8 @@
                 </div>
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        {% if session.user %}
                         <li class="nav-item"><a class="nav-link active" href="{{ url_for('index') }}">Home</a></li>
+                        {% if session.user %}
                         <li class="nav-item"><a class="nav-link active" href="{{ url_for('houses') }}">Houses</a></li>
                         <li class="nav-item"><a class="nav-link active" href="{{ url_for('bookings') }}">My Bookings</a></li>
                         <li class="nav-item"><a class="nav-link active" href="{{ url_for('logout') }}">Logout</a></li>

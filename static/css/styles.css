@@ -16,8 +16,8 @@ body{
 .navbar{
     animation: navanimation 3s;
     background-color: rgba(13, 86, 180, 0.384);
-    border-bottom: solid rgb(255, 255, 255);
 }
+
 .for-forms{
     margin-top:50px;
     padding:5%;
@@ -25,11 +25,11 @@ body{
 }
 .flashes{
     text-align: center;
-    background-color: #06df2352;
+    background-color: rgba(13, 86, 180, 0.384);
 }
 
 .main-image {
-    background-image: url("https://images.adsttc.com/media/images/5e1d/02c3/3312/fd58/9c00/06e9/large_jpg/NewHouse_SA_Photo_01.jpg?1578959519");
+    background-image: url('/static/assets/img/main-heading-image.jpg');
     background-color: #cccccc;
     height: 700px;
     background-position: center;
@@ -68,6 +68,7 @@ body{
     color:grey;
     text-decoration: none;
     padding:1%;
+    margin-top: 10px;
     border-radius: 5px;
 }
 .buttons:hover{
@@ -77,7 +78,17 @@ body{
     text-decoration: none;
     padding:1%;
 }
-  
+.house-gallery{
+    margin-top:50px;
+    border: 1px solid #ccc;
+    width: 100%;
+    background-color: white;
+}
+.house-gallery img{
+    width:100%;
+    height:auto;
+    padding: 10px;
+}
   @keyframes navanimation {
     from{
         background-color: rgb(118, 131, 148);

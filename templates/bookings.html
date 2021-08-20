@@ -1,10 +1,30 @@
 {% extends "base.html" %}
 {% block content %}
-{% for booking in bookings %}
-<h1>Email:{{ booking.Email }}</h1>
-<h2>Contact:{{ booking.number }}</h2>
-<h3>date:{{ booking.date }}</h3>
-<h4>Time:{{ booking.time }}</h4>
-<h5>by:{{ booking.by }}</h5>
-{% endfor %}
+<div class="container">
+    <div class="row card margin-top">
+        <div class="col-12 text-center">
+            <h1>Your Bookings</h1>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container-fluid margin-top card">
+    {% for booking in bookings %}
+    {% if booking.by == session.user %}
+    <div class="row ">
+        <div class="col-8">hello</div>
+        <div class="col-4 text-center">
+            
+            <h1>Email:{{ booking.Email }}</h1>
+            <h2>Contact:{{ booking.number }}</h2>
+            <h3>date:{{ booking.date }}</h3>
+            <h4>Time:{{ booking.time }}</h4>
+            <h5>Name:{{ booking.fullname }}</h5>
+        </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+</div>
 {% endblock %}

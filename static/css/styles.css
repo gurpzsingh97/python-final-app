@@ -1,8 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap');
+html{
+    height:100%;
+}
 
 body{
     font-family: 'Josefin Sans', sans-serif;
-    background-image:url("https://images.unsplash.com/photo-1615799998603-7c6270a45196?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Z3JleSUyMHRleHR1cmV8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80")
+    height:100%;
+    background-image:url("https://images.unsplash.com/photo-1615799998603-7c6270a45196?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Z3JleSUyMHRleHR1cmV8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80");
+    display:flex;
+    flex-direction: column;
+
 }
 
 .nav-item :hover{
@@ -55,9 +62,10 @@ body{
     margin-right:10px;
   }
 .footer{
-    margin-top:100px;
+    margin-top:auto;
     background-color: rgba(0, 0, 0, 0.767);
     color:#e4e4e4;
+    width:100%;
 }
 .image-card{
     margin-top:100px;
@@ -88,6 +96,12 @@ body{
     width:100%;
     height:auto;
     padding: 10px;
+}
+.form{
+    margin-top:50px;
+}
+.margin-top{
+    margin-top:50px;
 }
   @keyframes navanimation {
     from{

@@ -1,4 +1,35 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>house 3</h1>
+<div class="container house-gallery">
+    <div class="row">
+        <div class="col-12">
+            <img src="{{ url_for('static', filename='assets/img/house-3-main.jpg') }}" alt="">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-3 col-6">
+            <img src="{{ url_for('static', filename='assets/img/house-3-preview-1.jpg') }}" alt="">
+        </div>
+        <div class="col-lg-3 col-6">
+            <img src="{{ url_for('static', filename='assets/img/house-3-preview-2.jpg') }}" alt="">
+        </div>
+        <div class="col-lg-3 col-6">
+            <img src="{{ url_for('static', filename='assets/img/house-3-preview-3.jpg') }}" alt="">
+        </div>
+        <div class="col-lg-3 col-6">
+            <img src="{{ url_for('static', filename='assets/img/house-3-preview-4.jpg') }}" alt="">
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+            {% if session.user %}
+            <a href="{{ url_for('create_booking') }}"class="buttons" type="button">Book a house viewing!</a>
+            {% else %}
+            <a href="{{ url_for('login_warning') }}"class="buttons" type="button">Book a house viewing!</a>
+            {% endif %}
+        </div>
+    </div>
+</div>
 {% endblock %}

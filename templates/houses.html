@@ -3,69 +3,79 @@
 <div class="container house-gallery">
     <div class="row">
         <div class="col-12 col-lg-6 col-xl-8">
-            <img src="https://img.gtsstatic.net/reno/imagereader.aspx?imageurl=https%3A%2F%2Fsir.azureedge.net%2F1103i215%2Ftadbrdrg138a44jfrwnzchhfs0i215&option=N&permitphotoenlargement=false&w=1200" alt="">
+            <img src="{{ url_for('static', filename='assets/img/house-1-main.jpg') }}"
+                alt="">
         </div>
-        <div class="col-12 col-lg-6 col-xl-4 text-center">
-            <h3>London, England, NW8 6HR United Kingdom</h3>
-            <p>A rare double-fronted Freehold house, located on one of the widest plots on Avenue Road.
-                 The house is positioned on the corner of Acacia Road and Avenue Road. 
-                 This is undoubtedly a unique opportunity to acquire a low-built house with phenomenal refurbishment / redevelopment potential.
-                  With over 7,578 sq ft of interior space and over 5,900 sq ft of outside space, the sense of grandeur is evident throughout this remarkable home.
-                   Avenue Road, one of St. John's Wood's premier roads, is within close proximity to St.
-                    John's Wood High Street, St. John's Wood Underground station (Jubilee Line) and Regent's Park & within a 10 minute drive to Mayfair.</p>
-                    <br>
-                    <a href="{{ url_for('house1') }}"class="buttons" type="button">More Information</a>
-                    {% if session.user %}
-                    <a href="{{ url_for('create_booking') }}"class="buttons" type="button">Book a house viewing!</a>
-                    {% else %}
-                    <a href="{{ url_for('login_warning') }}"class="buttons" type="button">Book a house viewing!</a>
-                    {% endif %}
-        </div>
-    </div>
-</div>
-<div class="container house-gallery">
-    <div class="row">
-        <div class="col-12 col-lg-6 col-xl-8">
-            <img src="https://img.gtsstatic.net/reno/imagereader.aspx?imageurl=https%3A%2F%2Fsir.azureedge.net%2F1103i215%2Ftadbrdrg138a44jfrwnzchhfs0i215&option=N&permitphotoenlargement=false&w=1200" alt="">
-        </div>
-        <div class="col-12 col-lg-6 col-xl-4 text-center">
-            <h3>London, England, NW8 6HR United Kingdom</h3>
-            <p>A rare double-fronted Freehold house, located on one of the widest plots on Avenue Road.
-                 The house is positioned on the corner of Acacia Road and Avenue Road. 
-                 This is undoubtedly a unique opportunity to acquire a low-built house with phenomenal refurbishment / redevelopment potential.
-                  With over 7,578 sq ft of interior space and over 5,900 sq ft of outside space, the sense of grandeur is evident throughout this remarkable home.
-                   Avenue Road, one of St. John's Wood's premier roads, is within close proximity to St.
-                    John's Wood High Street, St. John's Wood Underground station (Jubilee Line) and Regent's Park & within a 10 minute drive to Mayfair.</p>
-                    <br>
-                    <a href="{{ url_for('house2') }}"class="buttons" type="button">More Information</a>
-                    {% if session.user %}
-                    <a href="{{ url_for('create_booking') }}"class="buttons" type="button">Book a house viewing!</a>
-                    {% else %}
-                    <a href="{{ url_for('login_warning') }}"class="buttons" type="button">Book a house viewing!</a>
-                    {% endif %}
+        <div class="col-12 col-lg-6 col-xl-4 margin-top text-center">
+            <h3>Hamilton Road, London, NW10</h3>
+            <br>
+            <p>A terrific opportunity to acquire this semi detached family house, requiring modernization,
+                dating from around the 1930s and situated on a popular residential estate close to local shops,
+                vast open parkland and Dollis Hill tube station (Jubilee line zone 3).
+                The house enjoys accommodation over two floors offering one reception room, kitchen,
+                downstairs toilet facility, three first floor generous bedrooms, and the main bathroom.
+                There is a decent sized rear garden and the road is served by allocated residents only parking bays.</p>
+            <br>
+            <a href="{{ url_for('house1') }}" class="buttons" type="button">Images</a>
+            {% if session.user %}
+            <a href="{{ url_for('create_booking') }}" class="buttons" type="button">Book a house viewing!</a>
+            {% else %}
+            <a href="{{ url_for('login_warning') }}" class="buttons" type="button">Book a house viewing!</a>
+            {% endif %}
         </div>
     </div>
 </div>
 <div class="container house-gallery">
     <div class="row">
         <div class="col-12 col-lg-6 col-xl-8">
-            <img src="https://img.gtsstatic.net/reno/imagereader.aspx?imageurl=https%3A%2F%2Fsir.azureedge.net%2F1103i215%2Ftadbrdrg138a44jfrwnzchhfs0i215&option=N&permitphotoenlargement=false&w=1200" alt="">
+            <img src="{{ url_for('static', filename='assets/img/house-2-main.jpg') }}"
+                alt="">
         </div>
-        <div class="col-12 col-lg-6 col-xl-4 text-center">
-            <h3>London, England, NW8 6HR United Kingdom</h3>
-            <p>A rare double-fronted Freehold house, located on one of the widest plots on Avenue Road.
-                 The house is positioned on the corner of Acacia Road and Avenue Road. 
-                 This is undoubtedly a unique opportunity to acquire a low-built house with phenomenal refurbishment / redevelopment potential.
-                  With over 7,578 sq ft of interior space and over 5,900 sq ft of outside space, the sense of grandeur is evident throughout this remarkable home.
-                   Avenue Road, one of St. John's Wood's premier roads, is within close proximity to St.
-                    John's Wood High Street, St. John's Wood Underground station (Jubilee Line) and Regent's Park & within a 10 minute drive to Mayfair.</p>
-                    <br>
-                    <a href="{{ url_for('house3') }}"class="buttons" type="button">More Information</a>
-                    {% if session.user %}
-                    <a href="{{ url_for('create_booking') }}"class="buttons" type="button">Book a house viewing!</a>
-                    {% else %}
-                    <a href="{{ url_for('login_warning') }}"class="buttons" type="button">Book a house viewing!</a>
-                    {% endif %}
+        <div class="col-12 col-lg-6 col-xl-4 text-center margin-top">
+            <h3>Crescent Road, Oxford, OX4</h3>
+            <br>
+            <p>Griffin Residential are pleased to offer for sale this very original spacious airy 
+                freehold detached 3/4 bedroom house, with separate annexe. The property is excellently situated,
+                 with easy access to the Oxford hospitals and the Oxford Business Park South. 
+                 There is an excellent bus service into central Oxford, via the vibrant Cowley Road, 
+                 with its wide range of shops and restaurants. Close by there are primary and secondary schools, 
+                 the library and two parks, with easy cycle routes to central Oxford and the river Thames. 
+                 The house is fully double-glazed, with gas-fired central heating throughout.</p>
+            <br>
+            <a href="{{ url_for('house2') }}" class="buttons" type="button">Images</a>
+            {% if session.user %}
+            <a href="{{ url_for('create_booking') }}" class="buttons" type="button">Book a house viewing!</a>
+            {% else %}
+            <a href="{{ url_for('login_warning') }}" class="buttons" type="button">Book a house viewing!</a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+<div class="container house-gallery">
+    <div class="row">
+        <div class="col-12 col-lg-6 col-xl-8">
+            <img src="{{ url_for('static', filename='assets/img/house-3-main.jpg') }}"
+                alt="">
+        </div>
+        <div class="col-12 col-lg-6 col-xl-4 text-center margin-top">
+            <h3>Marine Parade, Leigh-On-Sea, SS9</h3>
+            <p>GUIDE PRICE £480,000-£500,000We are delighted to offer to market this Freehold 
+                Two Bedroom ground floor flat with breathtaking, panoramic views of Leigh-on-Sea Seafront 
+                and the Leigh Marina. Situated just a short walk to Leigh Broadway, this 2-bedroom ground
+                 floor flat includes a garage with additional storage area, small patio out the back, 
+                 two very bright double bedrooms and a spacious living area overlooking the rear garden (not owned by flat). 
+                 Entering the property, you walk into a large spacious hallway with the kitchen and bathroom to the left
+                  and built in storage to the right. Further into the property you have bedroom one and two to the right 
+                  and straight forward with additional storage underneath the stairs. The living area is to
+                   the right-hand side which overlooks the rear garden.</p>
+            <br>
+            <a href="{{ url_for('house3') }}" class="buttons" type="button">Images</a>
+            {% if session.user %}
+            <a href="{{ url_for('create_booking') }}" class="buttons" type="button">Book a house viewing!</a>
+            {% else %}
+            <a href="{{ url_for('login_warning') }}" class="buttons" type="button">Book a house viewing!</a>
+            {% endif %}
+        </div>
     </div>
 </div>
 {% endblock %}

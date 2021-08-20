@@ -33,9 +33,24 @@ def bookings():
     return render_template("bookings.html", bookings=bookings)
 
 
-@app.route("/create_booking")
+@app.route("/create_booking",methods=["GET","POST"])
 def create_booking():
-    return render_template("create_booking.html")
+    if request.method == "POST":
+        booking={
+            "house":request.form.get("house"),
+            "Email":request.form.get("Email"),
+            "number":request.form.get("number"),
+            "date":request.form.get("date"),
+            "time":request.form.get("time"),
+            "fullname":request.form.get("fullname"),
+            "by":session["user"]
+        }
+        mongo.db.bookings.insert_one(booking)
+        flash("Your booking has been made")
+        return render_template("houses.html")
+    houses = mongo.db.houses.find().sort("house", 1)
+    times = mongo.db.times.find().sort("time", 1)
+    return render_template("create_booking.html", times=times, houses=houses)
 
 
 @app.route("/houses")

@@ -37,7 +37,7 @@ def bookings():
 def create_booking():
     if request.method == "POST":
         booking={
-            "house":request.form.get("house"),
+            "house_name":request.form.get("house"),
             "Email":request.form.get("Email"),
             "number":request.form.get("number"),
             "date":request.form.get("date"),

@@ -14,9 +14,15 @@
     {% for booking in bookings %}
     {% if booking.by == session.user %}
     <div class="row ">
-        <div class="col-8">hello</div>
+        {% if booking.house_name == "Hamilton Road, London, NW10" %}
+        <div class="col-8"><img src="{{ url_for('static', filename='assets/img/house-1-main.jpg') }}" alt=""></div>
+        {% elif booking.house_name == "Crescent Road, Oxford, OX4" %}
+        <div class="col-8"><img src="{{ url_for('static', filename='assets/img/house-2-main.jpg') }}" alt=""></div>
+        {% elif booking.house_name == "Marine Parade, Leigh-On-Sea, SS9" %}
+        <div class="col-8"><img src="{{ url_for('static', filename='assets/img/house-3-main.jpg') }}" alt=""></div>
+        {% else %}
+        {% endif %}
         <div class="col-4 text-center">
-            
             <h1>Email:{{ booking.Email }}</h1>
             <h2>Contact:{{ booking.number }}</h2>
             <h3>date:{{ booking.date }}</h3>

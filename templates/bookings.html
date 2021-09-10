@@ -9,11 +9,11 @@
 </div>
 
 
-
-<div class="container-fluid margin-top card">
     {% for booking in bookings %}
     {% if booking.by == session.user %}
-    <div class="row ">
+<div class="container-fluid margin-top card border-red">
+    
+    <div class="row">
         {% if booking.house_name == "Hamilton Road, London, NW10" %}
         <div class="col-8"><img src="{{ url_for('static', filename='assets/img/house-1-main.jpg') }}" alt=""></div>
         {% elif booking.house_name == "Crescent Road, Oxford, OX4" %}
@@ -22,7 +22,7 @@
         <div class="col-8"><img src="{{ url_for('static', filename='assets/img/house-3-main.jpg') }}" alt=""></div>
         {% else %}
         {% endif %}
-        <div class="col-4 text-center">
+        <div class="col-4 text-center margin-top">
             <h1>Email:{{ booking.Email }}</h1>
             <h2>Contact:{{ booking.number }}</h2>
             <h3>date:{{ booking.date }}</h3>
@@ -30,7 +30,8 @@
             <h5>Name:{{ booking.fullname }}</h5>
         </div>
     </div>
+    
+</div>
     {% endif %}
     {% endfor %}
-</div>
 {% endblock %}

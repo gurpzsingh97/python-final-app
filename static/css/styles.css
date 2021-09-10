@@ -88,7 +88,7 @@ body{
 }
 .house-gallery{
     margin-top:50px;
-    border: 1px solid #ccc;
+    border: 1px solid rgb(0, 0, 0);
     width: 100%;
     background-color: white;
 }
@@ -103,6 +103,13 @@ body{
 .margin-top{
     margin-top:50px;
 }
+
+
+.border-red{
+    border: 1px solid rgb(211, 0, 0);
+}
+
+
   @keyframes navanimation {
     from{
         background-color: rgb(118, 131, 148);
